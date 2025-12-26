@@ -16,9 +16,7 @@ export const Story = () => {
 
         <div className="text-lg text-[#8A8A8A] leading-relaxed flex flex-col gap-6">
           <p>
-            Desde hace tiempo tengo un piso en un pueblo que apenas uso.
-            Siempre lo vi como un lugar con posibilidades, pero vacío.
-            Un espacio donde podía hacer algo más que dejar pasar el tiempo.
+           aaaaaaaaaaaaaaaaaaaaaaaaaa
           </p>
 
           <p>
