@@ -13,10 +13,10 @@ export default function Page() {
       <Navbar />
       <Hero />
       <Story />
-      <WhatIs />
-      <Architecture />
+      
+     
       <Advances />
-      <Exclusive />
+     
       <Footer />
     </>
   );

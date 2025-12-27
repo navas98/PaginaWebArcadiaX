@@ -1,14 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const links = [
-  { label: "Historia", href: "#story" },
-  { label: "Qué es", href: "#what-is" },
-  { label: "Arquitectura", href: "#architecture" },
-  { label: "Avances", href: "#advances" },
-  { label: "Videos", href: "#exclusive" },
-];
+import {links} from "@/text/links";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,7 +26,7 @@ export const Navbar = () => {
         
         {/* Logo */}
         <span className="font-orbitron tracking-widest text-[#F5F5F5]">
-          ARCADIAX
+          <a href="#">ARCADIAX</a>
         </span>
 
         {/* Links */}

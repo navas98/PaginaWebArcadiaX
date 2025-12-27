@@ -1,13 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import { Section } from "@/components/layaout/Section";
 
-const advances = [
-  "Sistema arcade operativo",
-  "Backend modularizado",
-  "Frontend en desarrollo",
-  "Automatizaciones activas",
-];
+/**
+ * View data – avances referenciados a proyectos
+ */
+import { advances } from "@/text/advances";
 
 export const Advances = () => {
   return (
@@ -15,19 +14,70 @@ export const Advances = () => {
       id="advances"
       className="bg-[#0B0B0B] text-[#F5F5F5]"
     >
-      <div className="max-w-5xl px-6 flex flex-col gap-12">
-        
+      <div className="max-w-6xl px-6 mx-auto flex flex-col gap-12">
+
+        {/* Título */}
         <h2 className="text-4xl md:text-5xl font-orbitron">
           Últimos avances
         </h2>
 
-        <ul className="space-y-4 text-[#8A8A8A]">
+        {/* Grid responsive */}
+        <div
+          className="
+            grid gap-6
+            grid-cols-1
+            md:grid-cols-2
+            xl:grid-cols-3
+          "
+        >
           {advances.map((item) => (
-            <li key={item} className="border-b border-[#1F1F1F] pb-4">
-              {item}
-            </li>
+            <Link
+              key={item.project}
+              href={item.href}
+              className="
+                group rounded-xl border border-[#1F1F1F]
+                p-6 transition-all
+                hover:bg-[#111]
+                hover:border-[#3A3A3A]
+                focus:outline-none focus:ring-2 focus:ring-[#2A2A2A]
+                flex flex-col justify-between
+              "
+            >
+              <div>
+                <div className="flex justify-between items-start mb-3 gap-4">
+                  <h3 className="text-xl font-semibold leading-tight">
+                    {item.title}
+                  </h3>
+
+                  <span
+                    className="
+                      text-xs px-3 py-1 rounded-full
+                      border border-[#2A2A2A]
+                      text-[#8A8A8A]
+                      whitespace-nowrap
+                    "
+                  >
+                    {item.status}
+                  </span>
+                </div>
+
+                <p className="text-sm text-[#8A8A8A] leading-relaxed">
+                  {item.summary}
+                </p>
+              </div>
+
+              <span
+                className="
+                  mt-6 inline-block text-sm
+                  text-[#6B6B6B]
+                  group-hover:text-[#F5F5F5]
+                "
+              >
+                Ver proyecto →
+              </span>
+            </Link>
           ))}
-        </ul>
+        </div>
 
       </div>
     </Section>
