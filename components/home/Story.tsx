@@ -11,7 +11,7 @@ export const Story = () => {
       <div className="max-w-4xl px-6 flex flex-col gap-8">
         
         <h2 className="text-4xl md:text-5xl font-orbitron tracking-wide">
-          Espacio con potencial, pero sin alma
+          LA HISTORIA DETRÁS DE ARCADIAX
         </h2>
 
         <div className="text-lg text-[#8A8A8A] leading-relaxed flex flex-col gap-6">

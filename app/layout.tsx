@@ -26,7 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} antialiased`}>
+      <head>
+        {/* NES.css */}
+        <link
+          rel="stylesheet"
+          href="https://unpkg.com/nes.css@latest/css/nes.min.css"
+        />
+      </head>
+
+      <body className={`${geistSans.className} antialiased bg-black text-white`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
